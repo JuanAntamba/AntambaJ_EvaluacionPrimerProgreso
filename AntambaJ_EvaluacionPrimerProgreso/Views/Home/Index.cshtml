@@ -9,3 +9,27 @@
 
 <img src="https://ethic.es/wp-content/uploads/2023/01/memes-antes-1280x768.jpg" style="width: 700px; height: 700px;" alt="Meme">
 
+<div class="container mt-5">
+    <h2>Formulario con alerta</h2>
+
+    <div class="mb-3">
+        <label for="textoPersonalizado" class="form-label">Texto personalizado:</label>
+        <input type="text" class="form-control" id="textoPersonalizado" placeholder="Escribe algo aquí...">
+    </div>
+
+    <button class="btn btn-outline-success btn-lg" onclick="mostrarAlerta()">Mostrar Alerta</button>
+</div>
+
+@section Scripts {
+    <script>
+        function mostrarAlerta() {
+            const texto = document.getElementById("textoPersonalizado").value;
+            const nombre = "Juan Antamba";
+            const curso = "Progra 4";
+            const hobbie = "Jugar fut";
+
+            alert(`Mi nombre es ${nombre}, mi curso es ${curso}, mi hobbie es ${hobbie} y el valor del campo de texto es: ${texto}`);
+        }
+    </script>
+}
+
